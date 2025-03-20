@@ -17,6 +17,7 @@ import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { refineActivities } from "@/lib/ai-service"
+import { ThemeToggle } from "./ThemeToggle"
 
 const feedbackSchema = z.object({
   feedback: z.string().min(1, {
@@ -270,9 +271,12 @@ export function ResultsForm({
     <div className="flex flex-col h-full overflow-hidden">
       <div className="p-4 border-b bg-slate-50 dark:bg-slate-900 flex justify-between items-center">
         <h2 className="text-2xl font-bold">Activity Refinement Results</h2>
-        <Button onClick={handleBackToForm} variant="outline">
-          Back to Input
-        </Button>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <Button onClick={handleBackToForm} variant="outline">
+            Back to Input
+          </Button>
+        </div>
       </div>
 
       {error && (

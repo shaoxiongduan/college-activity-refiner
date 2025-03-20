@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 export default function ClientBody({
   children,
@@ -15,7 +16,9 @@ export default function ClientBody({
 
   return (
     <body className="antialiased" suppressHydrationWarning>
-      {children}
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        {children}
+      </ThemeProvider>
     </body>
   );
 }

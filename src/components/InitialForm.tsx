@@ -9,6 +9,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import Link from "next/link"
 import { Database, AlertCircle } from "lucide-react"
 import { SettingsDialog } from "./SettingsDialog"
+import { ThemeToggle } from "./ThemeToggle"
 import { UseFormReturn } from "react-hook-form"
 import * as z from "zod"
 
@@ -61,6 +62,7 @@ export function InitialForm({
             </CardDescription>
           </div>
           <div className="flex items-center gap-2">
+            <ThemeToggle />
             <Link href="/examples">
               <Button variant="outline" size="icon" title="Manage AI Examples">
                 <Database className="h-4 w-4" />
