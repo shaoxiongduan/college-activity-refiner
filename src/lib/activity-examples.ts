@@ -37,13 +37,6 @@ const defaultExamples: ActivityExample[] = [
     description: "Launched school-wide recycling program collecting 500+ lbs materials annually; organized climate awareness campaign reaching 1,200+ students; secured $2,000 grant",
     applicationType: "Common Application",
   },
-  {
-    original: "I worked as a summer camp counselor for two years where I supervised a group of 10 children ages 8-12 and planned daily activities and field trips.",
-    title: "Co-founder & Mentor",
-    organization: "Worldwide-Entre-Bators (WEB)-A HSEntrepreneurship Community (with 1000+ mbrs in China and the U.S.)",
-    description: "Cultivate teenagers' ENTR abilities by sharing knowledge & resourcesincubated 14 student-led startups, Use social media to promote ideaexchanges",
-    applicationType: "Common Application",
-  },
 ];
 
 // This is the actual array that will hold the examples
