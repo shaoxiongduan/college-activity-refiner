@@ -13,6 +13,15 @@ import { ThemeToggle } from "./ThemeToggle"
 import { UseFormReturn } from "react-hook-form"
 import * as z from "zod"
 
+// Define the schema to match what's used in ActivityRefinerForm
+const formSchema = z.object({
+  applicationType: z.string(),
+  activityText: z.string(),
+});
+
+// Create a type from the schema
+type FormValues = z.infer<typeof formSchema>;
+
 interface InitialFormProps {
   form: UseFormReturn<{
     applicationType: string;
@@ -39,7 +48,7 @@ interface InitialFormProps {
   hasApiKey: boolean;
   isAiProcessing: boolean;
   handleAppTypeChange: (value: string) => void;
-  onSubmit: (values: any) => void;
+  onSubmit: (values: FormValues) => void;
 }
 
 export function InitialForm({
